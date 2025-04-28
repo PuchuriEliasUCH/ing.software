@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historias de Usuario</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .nota {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            margin: 10px 0;
+        }
+        .nota ul {
+            margin-top: 0;
+        }
+        .nota + .nota {
+            margin-top: 1rem;
+        }
+        hr {
+            margin-top: 1rem;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Historias de Usuario</h1>
+    <div id="historias-container"></div>
+
+    <script>
+        // Función para cargar el archivo JSON y generar las tablas
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('historias-container');
+
+                data.forEach(historias => {
+                    const table = document.createElement('table');
+                    let tableHTML = `
+                        <tr><th>ID</th><td>${historias.ID}</td></tr>
+                        <tr><th>Nombre de Historia</th><td>${historias.NombreHistoria}</td></tr>
+                        <tr><th>Epica</th><td>${historias.Epica}</td></tr>
+                        <tr><th>Historia</th><td>${historias.Historia}</td></tr>
+                        <tr><th>Prioridad</th><td>${historias.Prioridad}</td></tr>
+                        <tr><th>Criterios de Aceptación</th><td><ul>`;
+
+                    historias.CriteriosAceptacion.forEach(ca => {
+                        tableHTML += `<li>${ca}</li>`;
+                    });
+
+                    tableHTML += `</ul></td></tr>`;
+
+                    table.innerHTML = tableHTML;
+                    container.appendChild(table);
+
+                    // Agregar las notas técnicas fuera de la tabla
+                    if (historias.NotasTecnicas && historias.NotasTecnicas.length > 0) {
+                        const notasContainer = document.createElement('div');
+                        notasContainer.classList.add('nota');
+                        notasContainer.innerHTML = `<strong>Notas Técnicas:</strong><ul>`;
+                        
+                        historias.NotasTecnicas.forEach(nota => {
+                            notasContainer.innerHTML += `<li>${nota}</li>`;
+                        });
+                        
+                        notasContainer.innerHTML += `</ul>`;
+                        container.appendChild(notasContainer);
+
+                        // Agregar la separación y la línea horizontal
+                        const separator = document.createElement('div');
+                        separator.innerHTML = '<hr style="margin-top: 1rem;">';
+                        container.appendChild(separator);
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error al cargar el archivo JSON:', error);
+            });
+    </script>
+
+</body>
+</html>

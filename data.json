@@ -1,0 +1,279 @@
+[
+    {
+      "ID": "MBLS-4",
+      "NombreHistoria": "Ver catálogo de productos y promociones",
+      "Epica": "Gestión de Productos",
+      "Historia": "Como cliente quiero ver el catálogo de productos y promociones para poder conocer la oferta disponible y elegir productos para mi compra.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El cliente puede acceder a una sección de catálogo desde la página principal.",
+        "CA2: El catálogo muestra todos los productos disponibles con su nombre, precio, imagen y estado de promoción si aplica.",
+        "CA3: Los productos en promoción deben destacarse visualmente (por ejemplo, etiqueta 'Descuento' o 'Oferta').",
+        "CA4: El cliente puede diferenciar claramente entre productos regulares y productos en promoción."
+      ],
+      "NotasTecnicas": [
+        "Usar etiquetas de 'promoción' para resaltar productos en oferta.",
+        "Optimizar la carga de imágenes para mejorar la experiencia de navegación."
+      ]
+    },
+    {
+      "ID": "MBLS-5",
+      "NombreHistoria": "Buscar productos",
+      "Epica": "Gestión de Productos",
+      "Historia": "Como cliente quiero buscar productos para encontrar rápidamente lo que necesito.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El cliente puede buscar productos por nombre o categoría.",
+        "CA2: El sistema muestra los productos coincidentes con la búsqueda.",
+        "CA3: Los resultados de la búsqueda se actualizan en tiempo real."
+      ],
+      "NotasTecnicas": [
+        "Implementar un sistema de búsqueda optimizado para manejar grandes volúmenes de productos.",
+        "Incluir un mecanismo de sugerencias de productos mientras el cliente escribe."
+      ]
+    },
+    {
+      "ID": "MBLS-6",
+      "NombreHistoria": "Filtrar productos",
+      "Epica": "Gestión de Productos",
+      "Historia": "Como cliente quiero filtrar los productos por diferentes características para encontrar el producto que más se ajuste a mis necesidades.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El cliente puede aplicar múltiples filtros (ejemplo: por precio, categoría, marca).",
+        "CA2: Los productos se deben mostrar de acuerdo con los filtros aplicados.",
+        "CA3: Los filtros deben ser visibles y fáciles de ajustar."
+      ],
+      "NotasTecnicas": [
+        "Usar filtros dinámicos para evitar recargar la página.",
+        "Implementar validaciones para evitar que los filtros no produzcan resultados."
+      ]
+    },
+    {
+      "ID": "MBLS-7",
+      "NombreHistoria": "Registrar usuario",
+      "Epica": "Gestión de Usuarios",
+      "Historia": "Como cliente quiero registrarme en la página para poder realizar compras y hacer seguimiento de mis pedidos.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El cliente puede ingresar sus datos (nombre, correo, contraseña) para registrarse.",
+        "CA2: El sistema debe verificar que el correo no esté registrado.",
+        "CA3: El cliente debe recibir un correo de confirmación al registrarse."
+      ],
+      "NotasTecnicas": [
+        "Validar el formato del correo y la contraseña.",
+        "Implementar seguridad en el almacenamiento de contraseñas (ejemplo: hashing)."
+      ]
+    },
+    {
+      "ID": "MBLS-8",
+      "NombreHistoria": "Cambiar contraseña",
+      "Epica": "Gestión de Usuarios",
+      "Historia": "Como usuario registrado quiero cambiar mi contraseña para mejorar la seguridad de mi cuenta.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El usuario puede solicitar el cambio de contraseña desde su perfil.",
+        "CA2: El sistema debe enviar un correo para verificar la solicitud de cambio.",
+        "CA3: El usuario debe ser capaz de elegir una nueva contraseña segura."
+      ],
+      "NotasTecnicas": [
+        "Implementar una política de contraseñas seguras.",
+        "Verificar que la contraseña nueva no esté igual a la anterior."
+      ]
+    },
+    {
+      "ID": "MBLS-9",
+      "NombreHistoria": "Cerrar sesión",
+      "Epica": "Gestión de Usuarios",
+      "Historia": "Como usuario quiero cerrar sesión en la página para asegurar que mi cuenta esté protegida cuando termine mi sesión.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El usuario puede cerrar sesión desde cualquier página.",
+        "CA2: Al cerrar sesión, el sistema debe redirigir al usuario a la página principal o de inicio."
+      ],
+      "NotasTecnicas": [
+        "Eliminar la sesión del usuario en el servidor.",
+        "Usar tokens de autenticación seguros para cerrar la sesión correctamente."
+      ]
+    },
+    {
+      "ID": "MBLS-10",
+      "NombreHistoria": "Crear carrito de compra",
+      "Epica": "Gestión de Carrito",
+      "Historia": "Como cliente quiero crear un carrito de compra para agregar los productos que quiero adquirir.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El cliente puede agregar productos al carrito desde la página de catálogo.",
+        "CA2: El carrito debe mostrar un resumen de los productos, cantidades y el precio total."
+      ],
+      "NotasTecnicas": [
+        "El carrito debe guardarse en el almacenamiento local del navegador o en la base de datos si el usuario está registrado.",
+        "Asegurarse de que el carrito sea persistente durante toda la sesión."
+      ]
+    },
+    {
+      "ID": "MBLS-11",
+      "NombreHistoria": "Ver información detallada del producto",
+      "Epica": "Gestión de Productos",
+      "Historia": "Como cliente quiero ver información detallada de los productos para conocer más sobre sus características y especificaciones antes de comprar.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El cliente puede hacer clic en un producto para ver su descripción detallada.",
+        "CA2: La información debe incluir imágenes, precio, descripción y especificaciones del producto."
+      ],
+      "NotasTecnicas": [
+        "Asegurar que las imágenes sean de alta calidad y optimizadas para la carga rápida.",
+        "El sistema debe cargar información dinámica de productos desde la base de datos."
+      ]
+    },
+    {
+      "ID": "MBLS-12",
+      "NombreHistoria": "Seleccionar medio de pago",
+      "Epica": "Gestión de Pedidos",
+      "Historia": "Como cliente quiero seleccionar un medio de pago para poder pagar mi compra de manera segura.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El cliente puede elegir entre diferentes métodos de pago (tarjeta de crédito, PayPal, etc.).",
+        "CA2: El sistema debe redirigir al cliente a una plataforma segura de pago."
+      ],
+      "NotasTecnicas": [
+        "Integrar pasarelas de pago seguras y cumplir con las normativas de seguridad (PCI DSS).",
+        "Implementar validaciones para asegurar que la transacción se complete correctamente."
+      ]
+    },
+    {
+      "ID": "MBLS-13",
+      "NombreHistoria": "Descargar comprobante de pago",
+      "Epica": "Gestión de Pedidos",
+      "Historia": "Como cliente quiero descargar el comprobante de pago para tener un registro de mi compra.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El cliente puede descargar un archivo PDF con el comprobante de su compra.",
+        "CA2: El comprobante debe contener el resumen de la compra, método de pago, fecha y número de transacción."
+      ],
+      "NotasTecnicas": [
+        "Generar el comprobante en formato PDF con las librerías adecuadas.",
+        "Incluir la firma digital del sistema para mayor validez."
+      ]
+    },
+    {
+      "ID": "MBLS-14",
+      "NombreHistoria": "Generar reporte de ventas",
+      "Epica": "Gestión de Reportes",
+      "Historia": "Como administrador quiero generar un reporte de ventas para analizar el rendimiento de la tienda.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El administrador puede generar un reporte de ventas por fecha (diario, mensual, etc.).",
+        "CA2: El reporte debe mostrar los productos más vendidos, ingresos totales y cantidad de ventas."
+      ],
+      "NotasTecnicas": [
+        "Crear un sistema eficiente de generación de reportes en formato CSV o Excel.",
+        "Incluir filtros para la personalización de los reportes."
+      ]
+    },
+    {
+      "ID": "MBLS-16",
+      "NombreHistoria": "Ver historial de compras",
+      "Epica": "Gestión de Pedidos",
+      "Historia": "Como cliente quiero ver el historial de mis compras para poder hacer un seguimiento de mis pedidos anteriores.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El cliente puede acceder a su historial de compras desde su perfil.",
+        "CA2: El historial debe incluir detalles de cada compra (productos, precio, fecha)."
+      ],
+      "NotasTecnicas": [
+        "El historial debe ser consultable desde una base de datos eficiente.",
+        "Asegurar que los datos sean fácilmente accesibles pero también seguros."
+      ]
+    },
+    {
+      "ID": "MBLS-17",
+      "NombreHistoria": "Aumentar o reducir cantidad de productos del carrito",
+      "Epica": "Gestión de Carrito",
+      "Historia": "Como cliente quiero aumentar o reducir la cantidad de productos en mi carrito para ajustar la cantidad que voy a comprar.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El cliente puede ajustar la cantidad de productos directamente desde el carrito.",
+        "CA2: El precio total del carrito se actualiza automáticamente al cambiar la cantidad."
+      ],
+      "NotasTecnicas": [
+        "El carrito debe recalcular los totales automáticamente después de cada cambio.",
+        "Implementar validaciones para que no se puedan seleccionar cantidades negativas."
+      ]
+    },
+    {
+      "ID": "MBLS-18",
+      "NombreHistoria": "Quitar producto del carrito",
+      "Epica": "Gestión de Carrito",
+      "Historia": "Como cliente quiero quitar un producto de mi carrito para eliminarlo si ya no lo quiero comprar.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El cliente puede eliminar productos del carrito fácilmente.",
+        "CA2: El carrito se actualiza automáticamente después de quitar un producto."
+      ],
+      "NotasTecnicas": [
+        "Implementar una opción de eliminación de productos con un botón claro.",
+        "Actualizar el total del carrito automáticamente."
+      ]
+    },
+    {
+      "ID": "MBLS-19",
+      "NombreHistoria": "Gestionar pagos sin pasarela",
+      "Epica": "Gestión de Pagos",
+      "Historia": "Como administrador quiero gestionar los pagos sin pasarela para poder realizar pagos manuales o por otros métodos.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El administrador puede registrar pagos manualmente en el sistema.",
+        "CA2: Los pagos deben quedar reflejados en el sistema sin necesidad de usar una pasarela externa."
+      ],
+      "NotasTecnicas": [
+        "Permitir la gestión de pagos a través de un sistema de ingreso manual.",
+        "Asegurarse de que todos los pagos sean correctamente registrados en la base de datos."
+      ]
+    },
+    {
+      "ID": "MBLS-20",
+      "NombreHistoria": "Registrar productos",
+      "Epica": "Gestión de Productos",
+      "Historia": "Como administrador quiero registrar nuevos productos en el sistema para poder ofrecerlos a los clientes.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El administrador puede agregar productos nuevos con su nombre, descripción, precio, imagen y categoría.",
+        "CA2: El producto debe ser visible en el catálogo inmediatamente después de ser registrado."
+      ],
+      "NotasTecnicas": [
+        "Implementar un formulario de registro de productos sencillo.",
+        "Validar que todos los campos requeridos estén completos antes de guardar."
+      ]
+    },
+    {
+      "ID": "MBLS-21",
+      "NombreHistoria": "Actualizar productos",
+      "Epica": "Gestión de Productos",
+      "Historia": "Como administrador quiero actualizar los productos existentes para mantener la información al día.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El administrador puede editar los detalles de los productos (nombre, precio, descripción, etc.).",
+        "CA2: El sistema debe guardar y mostrar los cambios en el catálogo inmediatamente."
+      ],
+      "NotasTecnicas": [
+        "Permitir la actualización de productos de manera fácil y rápida.",
+        "Incluir una validación para asegurar que los datos modificados son correctos."
+      ]
+    },
+    {
+      "ID": "MBLS-22",
+      "NombreHistoria": "Retirar o eliminar productos",
+      "Epica": "Gestión de Productos",
+      "Historia": "Como administrador quiero retirar o eliminar productos del sistema para mantener el catálogo actualizado.",
+      "Prioridad": "Alta",
+      "CriteriosAceptacion": [
+        "CA1: El administrador puede retirar productos que ya no estén disponibles.",
+        "CA2: El sistema debe actualizar el catálogo para reflejar la eliminación del producto."
+      ],
+      "NotasTecnicas": [
+        "Permitir la eliminación de productos de manera eficiente.",
+        "Verificar que la eliminación no afecte otros productos relacionados o dependientes."
+      ]
+    }
+  ]
+  
