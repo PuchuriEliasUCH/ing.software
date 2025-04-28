@@ -1,279 +1,419 @@
 [
-    {
-      "ID": "MBLS-4",
-      "NombreHistoria": "Ver catálogo de productos y promociones",
-      "Epica": "Gestión de Productos",
-      "Historia": "Como cliente quiero ver el catálogo de productos y promociones para poder conocer la oferta disponible y elegir productos para mi compra.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El cliente puede acceder a una sección de catálogo desde la página principal.",
-        "CA2: El catálogo muestra todos los productos disponibles con su nombre, precio, imagen y estado de promoción si aplica.",
-        "CA3: Los productos en promoción deben destacarse visualmente (por ejemplo, etiqueta 'Descuento' o 'Oferta').",
-        "CA4: El cliente puede diferenciar claramente entre productos regulares y productos en promoción."
-      ],
-      "NotasTecnicas": [
-        "Usar etiquetas de 'promoción' para resaltar productos en oferta.",
-        "Optimizar la carga de imágenes para mejorar la experiencia de navegación."
-      ]
-    },
-    {
-      "ID": "MBLS-5",
-      "NombreHistoria": "Buscar productos",
-      "Epica": "Gestión de Productos",
-      "Historia": "Como cliente quiero buscar productos para encontrar rápidamente lo que necesito.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El cliente puede buscar productos por nombre o categoría.",
-        "CA2: El sistema muestra los productos coincidentes con la búsqueda.",
-        "CA3: Los resultados de la búsqueda se actualizan en tiempo real."
-      ],
-      "NotasTecnicas": [
-        "Implementar un sistema de búsqueda optimizado para manejar grandes volúmenes de productos.",
-        "Incluir un mecanismo de sugerencias de productos mientras el cliente escribe."
-      ]
-    },
-    {
-      "ID": "MBLS-6",
-      "NombreHistoria": "Filtrar productos",
-      "Epica": "Gestión de Productos",
-      "Historia": "Como cliente quiero filtrar los productos por diferentes características para encontrar el producto que más se ajuste a mis necesidades.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El cliente puede aplicar múltiples filtros (ejemplo: por precio, categoría, marca).",
-        "CA2: Los productos se deben mostrar de acuerdo con los filtros aplicados.",
-        "CA3: Los filtros deben ser visibles y fáciles de ajustar."
-      ],
-      "NotasTecnicas": [
-        "Usar filtros dinámicos para evitar recargar la página.",
-        "Implementar validaciones para evitar que los filtros no produzcan resultados."
-      ]
-    },
-    {
-      "ID": "MBLS-7",
-      "NombreHistoria": "Registrar usuario",
-      "Epica": "Gestión de Usuarios",
-      "Historia": "Como cliente quiero registrarme en la página para poder realizar compras y hacer seguimiento de mis pedidos.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El cliente puede ingresar sus datos (nombre, correo, contraseña) para registrarse.",
-        "CA2: El sistema debe verificar que el correo no esté registrado.",
-        "CA3: El cliente debe recibir un correo de confirmación al registrarse."
-      ],
-      "NotasTecnicas": [
-        "Validar el formato del correo y la contraseña.",
-        "Implementar seguridad en el almacenamiento de contraseñas (ejemplo: hashing)."
-      ]
-    },
-    {
-      "ID": "MBLS-8",
-      "NombreHistoria": "Cambiar contraseña",
-      "Epica": "Gestión de Usuarios",
-      "Historia": "Como usuario registrado quiero cambiar mi contraseña para mejorar la seguridad de mi cuenta.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El usuario puede solicitar el cambio de contraseña desde su perfil.",
-        "CA2: El sistema debe enviar un correo para verificar la solicitud de cambio.",
-        "CA3: El usuario debe ser capaz de elegir una nueva contraseña segura."
-      ],
-      "NotasTecnicas": [
-        "Implementar una política de contraseñas seguras.",
-        "Verificar que la contraseña nueva no esté igual a la anterior."
-      ]
-    },
-    {
-      "ID": "MBLS-9",
-      "NombreHistoria": "Cerrar sesión",
-      "Epica": "Gestión de Usuarios",
-      "Historia": "Como usuario quiero cerrar sesión en la página para asegurar que mi cuenta esté protegida cuando termine mi sesión.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El usuario puede cerrar sesión desde cualquier página.",
-        "CA2: Al cerrar sesión, el sistema debe redirigir al usuario a la página principal o de inicio."
-      ],
-      "NotasTecnicas": [
-        "Eliminar la sesión del usuario en el servidor.",
-        "Usar tokens de autenticación seguros para cerrar la sesión correctamente."
-      ]
-    },
-    {
-      "ID": "MBLS-10",
-      "NombreHistoria": "Crear carrito de compra",
-      "Epica": "Gestión de Carrito",
-      "Historia": "Como cliente quiero crear un carrito de compra para agregar los productos que quiero adquirir.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El cliente puede agregar productos al carrito desde la página de catálogo.",
-        "CA2: El carrito debe mostrar un resumen de los productos, cantidades y el precio total."
-      ],
-      "NotasTecnicas": [
-        "El carrito debe guardarse en el almacenamiento local del navegador o en la base de datos si el usuario está registrado.",
-        "Asegurarse de que el carrito sea persistente durante toda la sesión."
-      ]
-    },
-    {
-      "ID": "MBLS-11",
-      "NombreHistoria": "Ver información detallada del producto",
-      "Epica": "Gestión de Productos",
-      "Historia": "Como cliente quiero ver información detallada de los productos para conocer más sobre sus características y especificaciones antes de comprar.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El cliente puede hacer clic en un producto para ver su descripción detallada.",
-        "CA2: La información debe incluir imágenes, precio, descripción y especificaciones del producto."
-      ],
-      "NotasTecnicas": [
-        "Asegurar que las imágenes sean de alta calidad y optimizadas para la carga rápida.",
-        "El sistema debe cargar información dinámica de productos desde la base de datos."
-      ]
-    },
-    {
-      "ID": "MBLS-12",
-      "NombreHistoria": "Seleccionar medio de pago",
-      "Epica": "Gestión de Pedidos",
-      "Historia": "Como cliente quiero seleccionar un medio de pago para poder pagar mi compra de manera segura.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El cliente puede elegir entre diferentes métodos de pago (tarjeta de crédito, PayPal, etc.).",
-        "CA2: El sistema debe redirigir al cliente a una plataforma segura de pago."
-      ],
-      "NotasTecnicas": [
-        "Integrar pasarelas de pago seguras y cumplir con las normativas de seguridad (PCI DSS).",
-        "Implementar validaciones para asegurar que la transacción se complete correctamente."
-      ]
-    },
-    {
-      "ID": "MBLS-13",
-      "NombreHistoria": "Descargar comprobante de pago",
-      "Epica": "Gestión de Pedidos",
-      "Historia": "Como cliente quiero descargar el comprobante de pago para tener un registro de mi compra.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El cliente puede descargar un archivo PDF con el comprobante de su compra.",
-        "CA2: El comprobante debe contener el resumen de la compra, método de pago, fecha y número de transacción."
-      ],
-      "NotasTecnicas": [
-        "Generar el comprobante en formato PDF con las librerías adecuadas.",
-        "Incluir la firma digital del sistema para mayor validez."
-      ]
-    },
-    {
-      "ID": "MBLS-14",
-      "NombreHistoria": "Generar reporte de ventas",
-      "Epica": "Gestión de Reportes",
-      "Historia": "Como administrador quiero generar un reporte de ventas para analizar el rendimiento de la tienda.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El administrador puede generar un reporte de ventas por fecha (diario, mensual, etc.).",
-        "CA2: El reporte debe mostrar los productos más vendidos, ingresos totales y cantidad de ventas."
-      ],
-      "NotasTecnicas": [
-        "Crear un sistema eficiente de generación de reportes en formato CSV o Excel.",
-        "Incluir filtros para la personalización de los reportes."
-      ]
-    },
-    {
-      "ID": "MBLS-16",
-      "NombreHistoria": "Ver historial de compras",
-      "Epica": "Gestión de Pedidos",
-      "Historia": "Como cliente quiero ver el historial de mis compras para poder hacer un seguimiento de mis pedidos anteriores.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El cliente puede acceder a su historial de compras desde su perfil.",
-        "CA2: El historial debe incluir detalles de cada compra (productos, precio, fecha)."
-      ],
-      "NotasTecnicas": [
-        "El historial debe ser consultable desde una base de datos eficiente.",
-        "Asegurar que los datos sean fácilmente accesibles pero también seguros."
-      ]
-    },
-    {
-      "ID": "MBLS-17",
-      "NombreHistoria": "Aumentar o reducir cantidad de productos del carrito",
-      "Epica": "Gestión de Carrito",
-      "Historia": "Como cliente quiero aumentar o reducir la cantidad de productos en mi carrito para ajustar la cantidad que voy a comprar.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El cliente puede ajustar la cantidad de productos directamente desde el carrito.",
-        "CA2: El precio total del carrito se actualiza automáticamente al cambiar la cantidad."
-      ],
-      "NotasTecnicas": [
-        "El carrito debe recalcular los totales automáticamente después de cada cambio.",
-        "Implementar validaciones para que no se puedan seleccionar cantidades negativas."
-      ]
-    },
-    {
-      "ID": "MBLS-18",
-      "NombreHistoria": "Quitar producto del carrito",
-      "Epica": "Gestión de Carrito",
-      "Historia": "Como cliente quiero quitar un producto de mi carrito para eliminarlo si ya no lo quiero comprar.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El cliente puede eliminar productos del carrito fácilmente.",
-        "CA2: El carrito se actualiza automáticamente después de quitar un producto."
-      ],
-      "NotasTecnicas": [
-        "Implementar una opción de eliminación de productos con un botón claro.",
-        "Actualizar el total del carrito automáticamente."
-      ]
-    },
-    {
-      "ID": "MBLS-19",
-      "NombreHistoria": "Gestionar pagos sin pasarela",
-      "Epica": "Gestión de Pagos",
-      "Historia": "Como administrador quiero gestionar los pagos sin pasarela para poder realizar pagos manuales o por otros métodos.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El administrador puede registrar pagos manualmente en el sistema.",
-        "CA2: Los pagos deben quedar reflejados en el sistema sin necesidad de usar una pasarela externa."
-      ],
-      "NotasTecnicas": [
-        "Permitir la gestión de pagos a través de un sistema de ingreso manual.",
-        "Asegurarse de que todos los pagos sean correctamente registrados en la base de datos."
-      ]
-    },
-    {
-      "ID": "MBLS-20",
-      "NombreHistoria": "Registrar productos",
-      "Epica": "Gestión de Productos",
-      "Historia": "Como administrador quiero registrar nuevos productos en el sistema para poder ofrecerlos a los clientes.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El administrador puede agregar productos nuevos con su nombre, descripción, precio, imagen y categoría.",
-        "CA2: El producto debe ser visible en el catálogo inmediatamente después de ser registrado."
-      ],
-      "NotasTecnicas": [
-        "Implementar un formulario de registro de productos sencillo.",
-        "Validar que todos los campos requeridos estén completos antes de guardar."
-      ]
-    },
-    {
-      "ID": "MBLS-21",
-      "NombreHistoria": "Actualizar productos",
-      "Epica": "Gestión de Productos",
-      "Historia": "Como administrador quiero actualizar los productos existentes para mantener la información al día.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El administrador puede editar los detalles de los productos (nombre, precio, descripción, etc.).",
-        "CA2: El sistema debe guardar y mostrar los cambios en el catálogo inmediatamente."
-      ],
-      "NotasTecnicas": [
-        "Permitir la actualización de productos de manera fácil y rápida.",
-        "Incluir una validación para asegurar que los datos modificados son correctos."
-      ]
-    },
-    {
-      "ID": "MBLS-22",
-      "NombreHistoria": "Retirar o eliminar productos",
-      "Epica": "Gestión de Productos",
-      "Historia": "Como administrador quiero retirar o eliminar productos del sistema para mantener el catálogo actualizado.",
-      "Prioridad": "Alta",
-      "CriteriosAceptacion": [
-        "CA1: El administrador puede retirar productos que ya no estén disponibles.",
-        "CA2: El sistema debe actualizar el catálogo para reflejar la eliminación del producto."
-      ],
-      "NotasTecnicas": [
-        "Permitir la eliminación de productos de manera eficiente.",
-        "Verificar que la eliminación no afecte otros productos relacionados o dependientes."
-      ]
-    }
-  ]
-  
+  {
+    "ID": "MBLS-4",
+    "NombreHistoria": "Ver catálogo de productos y promociones",
+    "Epica": "Gestión de Productos",
+    "Historia": "Como cliente quiero ver el catálogo de productos y promociones para poder conocer la oferta disponible y elegir productos para mi compra.",
+    "Prioridad": "Alta",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede acceder a una sección de catálogo desde la página principal.",
+      "CA2: El catálogo muestra todos los productos disponibles con su nombre, precio, imagen y estado de promoción si aplica.",
+      "CA3: Los productos en promoción deben destacarse visualmente (por ejemplo, etiqueta 'Descuento' o 'Oferta').",
+      "CA4: El cliente puede diferenciar claramente entre productos regulares y productos en promoción."
+    ],
+    "Tareas": [
+      "Diseñar la página de catálogo de productos.",
+      "Crear la funcionalidad para cargar productos dinámicamente.",
+      "Implementar la lógica para filtrar productos por promociones.",
+      "Asegurar que los productos en promoción se destaquen visualmente."
+    ],
+    "NotasTecnicas": [
+      "Usar etiquetas de 'promoción' para resaltar productos en oferta.",
+      "Optimizar la carga de imágenes para mejorar la experiencia de navegación."
+    ]
+  },
+  {
+    "ID": "MBLS-5",
+    "NombreHistoria": "Buscar productos",
+    "Epica": "Gestión de Productos",
+    "Historia": "Como cliente quiero buscar productos para encontrar rápidamente los que me interesan.",
+    "Prioridad": "Alta",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede usar una barra de búsqueda en la página de catálogo.",
+      "CA2: La búsqueda debe devolver resultados de productos relevantes.",
+      "CA3: El sistema debe manejar errores si no se encuentra ningún producto.",
+      "CA4: Los resultados de búsqueda deben actualizarse dinámicamente."
+    ],
+    "Tareas": [
+      "Diseñar la barra de búsqueda y su ubicación en la página.",
+      "Desarrollar la lógica para realizar búsquedas sobre los productos.",
+      "Crear un sistema para mostrar resultados relevantes en la búsqueda.",
+      "Implementar un sistema para mostrar un mensaje cuando no se encuentren productos."
+    ],
+    "NotasTecnicas": [
+      "Implementar búsqueda en el lado del cliente para mejorar la experiencia.",
+      "Optimizar el algoritmo de búsqueda para manejar grandes volúmenes de productos."
+    ]
+  },
+  {
+    "ID": "MBLS-6",
+    "NombreHistoria": "Filtrar productos",
+    "Epica": "Gestión de Productos",
+    "Historia": "Como cliente quiero filtrar productos para ver solo aquellos que me interesan según diferentes características.",
+    "Prioridad": "Media",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede aplicar filtros por categoría, precio y promoción.",
+      "CA2: Los filtros deben ser fácilmente accesibles en la página de catálogo.",
+      "CA3: Los productos deben actualizarse dinámicamente cuando se apliquen filtros.",
+      "CA4: El sistema debe permitir combinar múltiples filtros al mismo tiempo."
+    ],
+    "Tareas": [
+      "Diseñar el panel de filtros con categorías y opciones claras.",
+      "Crear la funcionalidad para aplicar filtros sobre los productos.",
+      "Implementar la lógica para combinar filtros de manera eficiente.",
+      "Asegurar que los resultados de los filtros se actualicen dinámicamente."
+    ],
+    "NotasTecnicas": [
+      "Utilizar un sistema de filtrado basado en JavaScript para no recargar la página.",
+      "Optimizar el código para garantizar un rendimiento eficiente con muchos productos."
+    ]
+  },
+  {
+    "ID": "MBLS-7",
+    "NombreHistoria": "Registrar usuario",
+    "Epica": "Gestión de Usuarios",
+    "Historia": "Como cliente quiero registrar una cuenta para poder gestionar mis compras y acceder a promociones.",
+    "Prioridad": "Alta",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede completar un formulario de registro con nombre, correo y contraseña.",
+      "CA2: El sistema debe validar que los datos introducidos sean correctos.",
+      "CA3: El cliente recibe un correo de confirmación de registro.",
+      "CA4: El sistema debe permitir al cliente iniciar sesión con su nueva cuenta."
+    ],
+    "Tareas": [
+      "Diseñar el formulario de registro con los campos necesarios.",
+      "Implementar la validación de los datos del formulario (correo, contraseña).",
+      "Configurar el sistema para enviar un correo de confirmación tras el registro.",
+      "Desarrollar la lógica de inicio de sesión con la cuenta recién registrada."
+    ],
+    "NotasTecnicas": [
+      "Asegurar la protección de datos mediante cifrado de contraseñas.",
+      "Utilizar un servicio de correo para enviar la confirmación de registro."
+    ]
+  },
+  {
+    "ID": "MBLS-8",
+    "NombreHistoria": "Cambiar contraseña",
+    "Epica": "Gestión de Usuarios",
+    "Historia": "Como usuario quiero cambiar mi contraseña para mantener mi cuenta segura.",
+    "Prioridad": "Alta",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede acceder a una opción para cambiar su contraseña desde su perfil.",
+      "CA2: El sistema debe validar que la nueva contraseña cumpla con los requisitos de seguridad.",
+      "CA3: El cliente debe recibir un mensaje de confirmación cuando la contraseña se haya cambiado.",
+      "CA4: La nueva contraseña debe ser utilizada inmediatamente para futuras sesiones."
+    ],
+    "Tareas": [
+      "Diseñar el formulario para cambiar la contraseña.",
+      "Crear la validación de seguridad para la nueva contraseña.",
+      "Implementar el sistema para cambiar la contraseña y notificar al cliente.",
+      "Actualizar el sistema de inicio de sesión para utilizar la nueva contraseña."
+    ],
+    "NotasTecnicas": [
+      "Asegurar que la contraseña sea almacenada de manera segura utilizando técnicas de cifrado.",
+      "Verificar que la nueva contraseña cumpla con políticas de seguridad como longitud mínima y uso de caracteres especiales."
+    ]
+  },
+  {
+    "ID": "MBLS-9",
+    "NombreHistoria": "Cerrar sesión",
+    "Epica": "Gestión de Usuarios",
+    "Historia": "Como usuario quiero cerrar mi sesión para asegurar que nadie más pueda acceder a mi cuenta.",
+    "Prioridad": "Alta",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede cerrar sesión desde cualquier página.",
+      "CA2: El cliente es redirigido a la página principal después de cerrar sesión.",
+      "CA3: El sistema debe invalidar la sesión correctamente para que el cliente no pueda acceder sin autenticarse nuevamente."
+    ],
+    "Tareas": [
+      "Diseñar el botón de cierre de sesión y su ubicación.",
+      "Implementar la funcionalidad para cerrar sesión y redirigir al cliente a la página principal.",
+      "Asegurar que la sesión se invalide correctamente en el backend.",
+      "Verificar que el cliente no pueda acceder a páginas protegidas después de cerrar sesión."
+    ],
+    "NotasTecnicas": [
+      "Usar una cookie para gestionar la sesión del cliente.",
+      "Asegurar que las sesiones no se mantengan activas después de cerrar sesión."
+    ]
+  },
+  {
+    "ID": "MBLS-10",
+    "NombreHistoria": "Crear carrito de compra",
+    "Epica": "Gestión de Carrito",
+    "Historia": "Como cliente quiero crear un carrito de compras para agregar los productos que quiero comprar.",
+    "Prioridad": "Alta",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede agregar productos al carrito desde la página de catálogo.",
+      "CA2: El sistema debe permitir ver el contenido del carrito en cualquier momento.",
+      "CA3: El cliente debe poder modificar la cantidad de productos en el carrito.",
+      "CA4: El sistema debe actualizar el total del carrito automáticamente."
+    ],
+    "Tareas": [
+      "Diseñar la interfaz de usuario para el carrito de compras.",
+      "Implementar la funcionalidad para agregar productos al carrito.",
+      "Crear la lógica para visualizar el contenido del carrito en cualquier momento.",
+      "Asegurar que el total del carrito se actualice correctamente cuando se agreguen o eliminen productos."
+    ],
+    "NotasTecnicas": [
+      "Utilizar almacenamiento local (localStorage) para guardar el carrito de compras temporalmente.",
+      "Implementar un sistema de actualización en tiempo real del total del carrito."
+    ]
+  },
+  {
+    "ID": "MBLS-11",
+    "NombreHistoria": "Ver información detallada del producto",
+    "Epica": "Gestión de Productos",
+    "Historia": "Como cliente quiero ver la información detallada del producto para tomar una decisión informada de compra.",
+    "Prioridad": "Alta",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede acceder a la información detallada de un producto desde el catálogo.",
+      "CA2: La página de detalles debe mostrar información relevante como descripción, precio, imágenes y especificaciones.",
+      "CA3: El cliente debe poder ver la disponibilidad del producto.",
+      "CA4: La página debe permitir al cliente agregar el producto al carrito desde la vista detallada."
+    ],
+    "Tareas": [
+      "Diseñar la página de detalles del producto.",
+      "Desarrollar la funcionalidad para mostrar información detallada de cada producto.",
+      "Implementar un sistema para mostrar la disponibilidad del producto.",
+      "Crear la opción para agregar el producto al carrito directamente desde la página de detalles."
+    ],
+    "NotasTecnicas": [
+      "Usar un sistema de gestión de imágenes para optimizar las cargas.",
+      "Asegurar que la información de disponibilidad se actualice automáticamente."
+    ]
+  },
+  {
+    "ID": "MBLS-12",
+    "NombreHistoria": "Seleccionar medio de pago",
+    "Epica": "Gestión de Pagos",
+    "Historia": "Como cliente quiero seleccionar un medio de pago para poder finalizar mi compra.",
+    "Prioridad": "Alta",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede elegir entre diferentes medios de pago (tarjeta de crédito, PayPal, etc.).",
+      "CA2: El sistema debe verificar la validez del medio de pago seleccionado.",
+      "CA3: El cliente debe recibir una confirmación del medio de pago elegido."
+    ],
+    "Tareas": [
+      "Diseñar el formulario para seleccionar medios de pago.",
+      "Implementar la lógica para verificar los datos del medio de pago.",
+      "Crear el sistema de integración con pasarelas de pago si es necesario.",
+      "Notificar al cliente la elección del medio de pago después de seleccionarlo."
+    ],
+    "NotasTecnicas": [
+      "Usar servicios seguros para el procesamiento de pagos.",
+      "Asegurar que el proceso de pago sea rápido y seguro para el usuario."
+    ]
+  },
+  {
+    "ID": "MBLS-13",
+    "NombreHistoria": "Descargar comprobante de pago",
+    "Epica": "Gestión de Pagos",
+    "Historia": "Como cliente quiero descargar un comprobante de pago para tener un registro de mi compra.",
+    "Prioridad": "Alta",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede descargar el comprobante de pago después de completar la compra.",
+      "CA2: El comprobante debe incluir detalles como fecha, productos comprados, precio y medio de pago.",
+      "CA3: El cliente debe recibir una notificación cuando el comprobante esté listo para descargar."
+    ],
+    "Tareas": [
+      "Diseñar el formato del comprobante de pago.",
+      "Implementar la funcionalidad para generar el comprobante automáticamente.",
+      "Crear una opción para descargar el comprobante en formato PDF.",
+      "Notificar al cliente cuando el comprobante esté disponible para descargar."
+    ],
+    "NotasTecnicas": [
+      "Usar una librería de generación de PDFs como jsPDF.",
+      "Asegurar que los datos del comprobante sean correctos y estén bien formateados."
+    ]
+  },
+  {
+    "ID": "MBLS-14",
+    "NombreHistoria": "Generar reporte de ventas",
+    "Epica": "Gestión de Reportes",
+    "Historia": "Como administrador quiero generar un reporte de ventas para analizar el rendimiento de la tienda.",
+    "Prioridad": "Alta",
+    "CriteriosAceptacion": [
+      "CA1: El administrador puede seleccionar un rango de fechas para generar el reporte.",
+      "CA2: El reporte debe mostrar los productos vendidos, el total de ventas y el medio de pago.",
+      "CA3: El sistema debe permitir exportar el reporte a formato PDF o Excel."
+    ],
+    "Tareas": [
+      "Diseñar la interfaz para seleccionar el rango de fechas.",
+      "Implementar la lógica para calcular las ventas dentro del rango de fechas seleccionado.",
+      "Crear la opción para exportar el reporte en los formatos PDF o Excel.",
+      "Notificar al administrador cuando el reporte esté listo."
+    ],
+    "NotasTecnicas": [
+      "Usar herramientas de análisis de datos como SQL para generar el reporte.",
+      "Implementar la exportación de datos en formato Excel utilizando bibliotecas como SheetJS."
+    ]
+  },
+  {
+    "ID": "MBLS-15",
+    "NombreHistoria": "Ver historial de compras",
+    "Epica": "Gestión de Usuario",
+    "Historia": "Como usuario quiero ver mi historial de compras para poder consultar mis pedidos anteriores.",
+    "Prioridad": "Media",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede acceder a su historial de compras desde su perfil.",
+      "CA2: El historial debe mostrar detalles de los pedidos anteriores como fecha, productos y precio.",
+      "CA3: El cliente debe poder ver el estado de cada pedido (entregado, pendiente, cancelado)."
+    ],
+    "Tareas": [
+      "Diseñar la interfaz para visualizar el historial de compras.",
+      "Implementar la funcionalidad para cargar los pedidos anteriores.",
+      "Asegurar que los pedidos se muestren con su estado actualizado."
+    ],
+    "NotasTecnicas": [
+      "Usar un sistema de base de datos para almacenar el historial de compras.",
+      "Asegurar que los datos sean accesibles de manera rápida y eficiente."
+    ]
+  },
+  {
+    "ID": "MBLS-16",
+    "NombreHistoria": "Calificar productos",
+    "Epica": "Gestión de Opiniones",
+    "Historia": "Como cliente quiero poder calificar los productos para ayudar a otros usuarios en su compra.",
+    "Prioridad": "Media",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede calificar un producto después de haberlo comprado.",
+      "CA2: El cliente puede dejar una reseña de texto junto con la calificación.",
+      "CA3: La calificación promedio de los productos debe mostrarse en el catálogo."
+    ],
+    "Tareas": [
+      "Diseñar el sistema de calificación con estrellas.",
+      "Implementar la funcionalidad para que los clientes dejen reseñas junto con su calificación.",
+      "Crear un sistema para calcular y mostrar la calificación promedio."
+    ],
+    "NotasTecnicas": [
+      "Almacenar las calificaciones y reseñas en la base de datos para futuras consultas.",
+      "Implementar un sistema de moderación para evitar reseñas inapropiadas."
+    ]
+  },
+  {
+    "ID": "MBLS-17",
+    "NombreHistoria": "Agregar producto a lista de deseos",
+    "Epica": "Gestión de Productos",
+    "Historia": "Como cliente quiero agregar productos a mi lista de deseos para poder comprarlos en el futuro.",
+    "Prioridad": "Media",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede agregar productos a su lista de deseos desde el catálogo.",
+      "CA2: La lista de deseos debe ser accesible desde el perfil del cliente.",
+      "CA3: El cliente debe poder eliminar productos de su lista de deseos."
+    ],
+    "Tareas": [
+      "Diseñar la interfaz para agregar productos a la lista de deseos.",
+      "Crear la funcionalidad para guardar productos en una lista separada.",
+      "Implementar la opción de eliminar productos de la lista de deseos."
+    ],
+    "NotasTecnicas": [
+      "Utilizar almacenamiento local o base de datos para guardar la lista de deseos del cliente.",
+      "Asegurar que los productos en la lista de deseos se muestren con su estado actualizado."
+    ]
+  },
+  {
+    "ID": "MBLS-18",
+    "NombreHistoria": "Ver recomendaciones personalizadas",
+    "Epica": "Gestión de Recomendaciones",
+    "Historia": "Como cliente quiero recibir recomendaciones personalizadas para descubrir productos relacionados a mis intereses.",
+    "Prioridad": "Baja",
+    "CriteriosAceptacion": [
+      "CA1: El sistema debe mostrar productos recomendados en base a mi historial de compras o preferencias.",
+      "CA2: Las recomendaciones deben actualizarse regularmente para mantenerlas relevantes.",
+      "CA3: El cliente debe poder ver más detalles sobre los productos recomendados."
+    ],
+    "Tareas": [
+      "Diseñar la sección de recomendaciones personalizadas.",
+      "Crear la lógica para mostrar productos relevantes según el historial de compras.",
+      "Implementar un sistema que actualice las recomendaciones en función de la actividad del cliente."
+    ],
+    "NotasTecnicas": [
+      "Implementar un sistema de recomendación basado en el historial de compras y preferencias del usuario.",
+      "Utilizar un algoritmo de machine learning o reglas predefinidas para personalizar las recomendaciones."
+    ]
+  },
+  {
+    "ID": "MBLS-19",
+    "NombreHistoria": "Gestionar inventario",
+    "Epica": "Gestión de Inventario",
+    "Historia": "Como administrador quiero gestionar el inventario de productos para asegurarme de que siempre haya stock disponible.",
+    "Prioridad": "Alta",
+    "CriteriosAceptacion": [
+      "CA1: El administrador puede ver el nivel de inventario de cada producto.",
+      "CA2: El sistema debe notificar al administrador cuando el stock de un producto esté bajo.",
+      "CA3: El administrador puede actualizar manualmente el nivel de inventario."
+    ],
+    "Tareas": [
+      "Diseñar la interfaz de gestión de inventario.",
+      "Crear la funcionalidad para ver y actualizar los niveles de stock.",
+      "Implementar un sistema de notificación para cuando el inventario sea bajo."
+    ],
+    "NotasTecnicas": [
+      "Asegurar que el sistema de gestión de inventario esté integrado con la base de datos.",
+      "Optimizar la actualización en tiempo real de los niveles de stock."
+    ]
+  },
+  {
+    "ID": "MBLS-20",
+    "NombreHistoria": "Consultar estado de un pedido",
+    "Epica": "Gestión de Pedidos",
+    "Historia": "Como cliente quiero consultar el estado de mi pedido para saber si está siendo procesado o ya ha sido enviado.",
+    "Prioridad": "Alta",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede ver el estado actual de su pedido desde su perfil.",
+      "CA2: El sistema debe mostrar información detallada sobre el pedido, como productos, fecha y estado de envío.",
+      "CA3: El cliente debe ser notificado si el estado de su pedido cambia."
+    ],
+    "Tareas": [
+      "Diseñar la interfaz de consulta de estado de pedidos.",
+      "Implementar la lógica para obtener el estado de un pedido desde la base de datos.",
+      "Crear un sistema de notificación que avise al cliente cuando el estado de su pedido cambie."
+    ],
+    "NotasTecnicas": [
+      "Asegurar que el estado del pedido se actualice en tiempo real desde el sistema de backend.",
+      "Utilizar tecnologías de notificación push o correo electrónico para informar al cliente."
+    ]
+  },
+  {
+    "ID": "MBLS-21",
+    "NombreHistoria": "Gestionar devoluciones",
+    "Epica": "Gestión de Pedidos",
+    "Historia": "Como cliente quiero gestionar devoluciones de productos para poder solicitar un reembolso o cambio cuando un producto no sea adecuado.",
+    "Prioridad": "Alta",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede iniciar una solicitud de devolución desde su perfil.",
+      "CA2: El sistema debe verificar si el producto es elegible para devolución.",
+      "CA3: El cliente debe recibir una notificación cuando la solicitud de devolución sea aprobada."
+    ],
+    "Tareas": [
+      "Diseñar la interfaz para iniciar una solicitud de devolución.",
+      "Implementar la lógica para verificar la elegibilidad de los productos para devolución.",
+      "Crear un sistema para gestionar y aprobar solicitudes de devolución."
+    ],
+    "NotasTecnicas": [
+      "Asegurar que el sistema de devoluciones esté vinculado al inventario para actualizar el stock.",
+      "Implementar un proceso de aprobación claro y eficiente para las solicitudes de devolución."
+    ]
+  },
+  {
+    "ID": "MBLS-22",
+    "NombreHistoria": "Generar factura electrónica",
+    "Epica": "Gestión de Pagos",
+    "Historia": "Como cliente quiero recibir una factura electrónica después de realizar una compra para tener un registro oficial de la transacción.",
+    "Prioridad": "Media",
+    "CriteriosAceptacion": [
+      "CA1: El cliente puede recibir una factura electrónica después de completar su compra.",
+      "CA2: La factura debe contener detalles como el nombre del cliente, productos comprados, precios y el IVA.",
+      "CA3: El sistema debe permitir al cliente descargar la factura en formato PDF."
+    ],
+    "Tareas": [
+      "Diseñar la plantilla de la factura electrónica.",
+      "Implementar la lógica para generar la factura después de cada compra.",
+      "Crear una opción para descargar la factura en formato PDF."
+    ],
+    "NotasTecnicas": [
+      "Asegurar que la factura se genere con los datos correctos de la compra.",
+      "Utilizar librerías como jsPDF para la creación del archivo PDF."
+    ]
+  }
+]
